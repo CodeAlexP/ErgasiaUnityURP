@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 2bd8959f5fbd3644aa33af1a155fc147, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 1cf6f4c6e6e0518419839d3f5448dd99, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -545,17 +545,17 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
   shallowColor: {r: 0, g: 0.7666192, b: 0.77254903, a: 0.5019608}
-  deepColor: {r: 0.01176469, g: 0.28620553, b: 0.50980073, a: 1}
+  deepColor: {r: 0.01176469, g: 0.28620112, b: 0.50980073, a: 1}
   colorDepth: 11
-  horizonColor: {r: 0, g: 0.22738203, b: 0.8, a: 1}
+  horizonColor: {r: 0, g: 0.22737762, b: 0.8, a: 1}
   horizonDistance: 20
   shoreFade: 1
-  shoreColor: {r: 0, g: 0.98039216, b: 0.3018918, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30188742, a: 0}
   shoreStrength: 0
   shoreBlend: 1
   shoreDepth: 0.74
   waveColor: {r: 0, g: 0, b: 0, a: 0}
-  underwaterColor: {r: 0.2038562, g: 0.3097349, b: 0.517647, a: 1}
+  underwaterColor: {r: 0.20385203, g: 0.3097305, b: 0.517647, a: 1}
   underwaterColorStrength: 1
   underwaterRefractionStrength: 0.099
   surfaceFoamTexture: {fileID: 2800000, guid: d3b0d77dfe711a04c8ff18ecc260aa66, type: 3}
@@ -2254,7 +2254,7 @@ PrefabInstance:
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8944336655422409503, guid: f6d148d888ffbf54b9afe9936dfaec1f,
         type: 3}
@@ -6462,17 +6462,17 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
   shallowColor: {r: 0, g: 0.7666192, b: 0.77254903, a: 0.5019608}
-  deepColor: {r: 0.01176469, g: 0.28620547, b: 0.50980073, a: 1}
+  deepColor: {r: 0.01176469, g: 0.2862011, b: 0.50980073, a: 1}
   colorDepth: 11
-  horizonColor: {r: 0, g: 0.227382, b: 0.8, a: 1}
+  horizonColor: {r: 0, g: 0.2273776, b: 0.8, a: 1}
   horizonDistance: 20
   shoreFade: 1
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30189177, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.3018874, a: 0}
   shoreStrength: 0
   shoreBlend: 1
   shoreDepth: 0.74
   waveColor: {r: 0, g: 0, b: 0, a: 0}
-  underwaterColor: {r: 0.20385617, g: 0.30973488, b: 0.517647, a: 1}
+  underwaterColor: {r: 0.203852, g: 0.30973047, b: 0.517647, a: 1}
   underwaterColorStrength: 1
   underwaterRefractionStrength: 0.099
   surfaceFoamTexture: {fileID: 2800000, guid: d3b0d77dfe711a04c8ff18ecc260aa66, type: 3}
@@ -18644,7 +18644,7 @@ PrefabInstance:
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8,
         type: 3}
@@ -19251,7 +19251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5e504b96a2d6d4783fc933a0bbe123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeMultiplier: 2000
+  skybox: {fileID: 2100000, guid: 1cf6f4c6e6e0518419839d3f5448dd99, type: 2}
+  timeMultiplier: 1000
   startHour: 12
   sunLight: {fileID: 1247745169}
   sunriseHour: 7
@@ -19307,7 +19308,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1135763413
 PrefabInstance:
@@ -20441,14 +20442,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1247745167}
-  m_LocalRotation: {x: 0.23268077, y: -0.3200317, z: 0.40495184, w: 0.8242897}
+  m_LocalRotation: {x: 0.9078147, y: -0.31171018, z: 0.14711134, w: -0.23888804}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 40, y: -26.278, z: 42.615}
+  m_LocalEulerAnglesHint: {x: 200, y: -26.278, z: 42.615}
 --- !u!1001 &1250092749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21148,59 +21149,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1340557308}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1344931738
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1344931740}
-  - component: {fileID: 1344931739}
-  m_Layer: 0
-  m_Name: SkyBoxtr
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1344931739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344931738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f69ee0930c7e9e1498100e4a7720aa53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SkyBoxtr:
-  - {fileID: 2100000, guid: 8f59105639b98d34d9c1211d0f49d8ba, type: 2}
-  - {fileID: 2100000, guid: 09b3642d7c13cd6449c36d2899e23b9a, type: 2}
-  - {fileID: 2100000, guid: 97a3be6ab5fd58e4daa14276fa5a8138, type: 2}
-  - {fileID: 2100000, guid: 197e2d0071b200b4c87356ab5e519106, type: 2}
-  - {fileID: 2100000, guid: d244233a2723e1743b5045c0447f32d4, type: 2}
-  - {fileID: 2100000, guid: f91c0d60775f26b48807c35ea920dee9, type: 2}
-  - {fileID: 2100000, guid: dde04df16e951164ab65736325f74743, type: 2}
-  - {fileID: 2100000, guid: da94a747528b9614a80809e7c2cb4abf, type: 2}
---- !u!4 &1344931740
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1344931738}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1277.4906, y: 1019.82056, z: 936.1957}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1353909902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21326,7 +21274,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1359380069
 MonoBehaviour:
@@ -32794,7 +32742,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 40, y: -26.278, z: 42.615}
 --- !u!1001 &1904475055
 PrefabInstance:
@@ -35514,7 +35462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 2
+  MoveSpeed: 50
   SprintSpeed: 5.335
   RotationSmoothTime: 0.12
   SpeedChangeRate: 10
@@ -35531,7 +35479,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   FootstepAudioVolume: 0.3
-  JumpHeight: 1.2
+  JumpHeight: 20
   Gravity: -15
   JumpTimeout: 0.3
   FallTimeout: 0.15
