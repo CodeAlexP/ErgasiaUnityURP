@@ -2,18 +2,32 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
-public class NewBehaviourScript : MonoBehaviour
+
+public class TimeController : MonoBehaviour
 {
+//////////////////////////////////
+   
+
+
+
+    [SerializeField]
+    private static readonly int  Transition=Shader.PropertyToID("_CubemapTransition");
+    [SerializeField]
+    private Material skybox;
+
+
+    ///////////////////////////////////
+
+    
+    // Start is called before the first frame update
     [SerializeField]
     private float timeMultiplier;
 
     [SerializeField]
     private float startHour;
 
-    [SerializeField]
-    private TextMeshProUGUI timeText;
+    
 
     [SerializeField]
     private Light sunLight;
@@ -60,19 +74,19 @@ public class NewBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+
         UpdateTimeOfDay();
         RotateSun();
         UpdateLightSettings();
+        
     }
 
     private void UpdateTimeOfDay()
     {
         currentTime = currentTime.AddSeconds(Time.deltaTime * timeMultiplier);
 
-        if (timeText != null)
-        {
-            timeText.text = currentTime.ToString("HH:mm");
-        }
+        
     }
 
     private void RotateSun()
@@ -86,7 +100,9 @@ public class NewBehaviourScript : MonoBehaviour
 
             double percentage = timeSinceSunrise.TotalMinutes / sunriseToSunsetDuration.TotalMinutes;
 
-            sunLightRotation = Mathf.Lerp(0, 179, (float)percentage);
+            sunLightRotation = Mathf.Lerp(0, 180, (float)percentage);
+
+            skybox.SetFloat(Transition,0.00555555555f*sunLightRotation);
         }
         else
         {
@@ -95,7 +111,14 @@ public class NewBehaviourScript : MonoBehaviour
 
             double percentage = timeSinceSunset.TotalMinutes / sunsetToSunriseDuration.TotalMinutes;
 
-            sunLightRotation = Mathf.Lerp(179, 179, (float)percentage);
+            sunLightRotation = Mathf.Lerp(181, 360, (float)percentage);
+            if(sunLightRotation>=350){
+
+
+            
+             skybox.SetFloat(Transition,1-(sunLightRotation-350)*1/10);
+            }
+             
         }
 
         sunLight.transform.rotation = Quaternion.AngleAxis(sunLightRotation, Vector3.right);
