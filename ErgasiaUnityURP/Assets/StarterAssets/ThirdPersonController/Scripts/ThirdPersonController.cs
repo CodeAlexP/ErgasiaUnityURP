@@ -14,6 +14,7 @@ namespace StarterAssets
 #endif
     public class ThirdPersonController : MonoBehaviour
     {
+        
         [Header("Player")]
         [Tooltip("Move speed of the character in m/s")]
         public float MoveSpeed = 2.0f;
@@ -109,7 +110,10 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
-
+        ////////////////////////////////////////
+        private bool onwater=false;
+    
+////////////////////////////////////////////
         private bool IsCurrentDeviceMouse
         {
             get
@@ -154,11 +158,46 @@ namespace StarterAssets
 
         private void Update()
         {
+            if(onwater){
+                if(Input.GetButton("w")||Input.GetButton("a")||Input.GetButton("s")||Input.GetButton("d")){
+
+                        GetComponent<Animator>().Play("Swimming");
+                    }else{
+                        GetComponent<Animator>().Play("Treading Water");
+                
+                    }
+            }
             _hasAnimator = TryGetComponent(out _animator);
 
             JumpAndGravity();
             GroundedCheck();
             Move();
+            
+        }
+        private void OnTriggerEnter(Collider other) {
+            if(other.tag=="Water" ){
+                MoveSpeed=0.9f;
+                SprintSpeed=1.7f;
+                _verticalVelocity=0f;
+                Gravity=0f;
+                onwater=true;
+                    
+
+                
+                   
+            
+                   
+                
+            }
+        }
+         private void OnTriggerExit(Collider other) {
+            MoveSpeed=2.0f;
+            SprintSpeed=5.0f;
+            onwater=false;
+            GetComponent<Animator>().Play("Idle Walk Run Blend");
+            Gravity=-15f;
+
+
         }
 
         private void LateUpdate()
