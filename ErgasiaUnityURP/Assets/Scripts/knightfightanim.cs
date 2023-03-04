@@ -13,6 +13,12 @@ public class knightfightanim : MonoBehaviour
         if(Input.GetButton("y")){
                 Knight.GetComponent<Animator>().Play("death");
         }
+        if(Input.GetButton("h")){
+                Knight.GetComponent<Animator>().Play("attack");
+        }
+        if(Input.GetButton("b")){
+                Knight.GetComponent<Animator>().Play("block");
+        }
         
     }
 }
