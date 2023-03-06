@@ -2664,17 +2664,17 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
   shallowColor: {r: 0, g: 0.5696293, b: 0.57547164, a: 0.5019608}
-  deepColor: {r: 0.01176469, g: 0.28605947, b: 0.50980073, a: 1}
+  deepColor: {r: 0.01176469, g: 0.28605506, b: 0.50980073, a: 1}
   colorDepth: 11
-  horizonColor: {r: 0, g: 0.22723597, b: 0.8, a: 1}
+  horizonColor: {r: 0, g: 0.22723159, b: 0.8, a: 1}
   horizonDistance: 20
   shoreFade: 1
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30174577, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30174136, a: 0}
   shoreStrength: 0
   shoreBlend: 1
   shoreDepth: 0.74
   waveColor: {r: 0, g: 0, b: 0, a: 0}
-  underwaterColor: {r: 0.20371777, g: 0.30958888, b: 0.517647, a: 1}
+  underwaterColor: {r: 0.2037136, g: 0.30958447, b: 0.517647, a: 1}
   underwaterColorStrength: 1
   underwaterRefractionStrength: 0.112
   surfaceFoamTexture: {fileID: 2800000, guid: d3b0d77dfe711a04c8ff18ecc260aa66, type: 3}
@@ -10958,17 +10958,17 @@ MonoBehaviour:
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
   shallowColor: {r: 0, g: 0.5696293, b: 0.57547164, a: 0.5019608}
-  deepColor: {r: 0.01176469, g: 0.28605944, b: 0.50980073, a: 1}
+  deepColor: {r: 0.01176469, g: 0.28605503, b: 0.50980073, a: 1}
   colorDepth: 11
-  horizonColor: {r: 0, g: 0.22723594, b: 0.8, a: 1}
+  horizonColor: {r: 0, g: 0.22723153, b: 0.8, a: 1}
   horizonDistance: 20
   shoreFade: 1
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30174574, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30174133, a: 0}
   shoreStrength: 0
   shoreBlend: 1
   shoreDepth: 0.74
   waveColor: {r: 0, g: 0, b: 0, a: 0}
-  underwaterColor: {r: 0.20371774, g: 0.30958885, b: 0.517647, a: 1}
+  underwaterColor: {r: 0.20371357, g: 0.30958444, b: 0.517647, a: 1}
   underwaterColorStrength: 1
   underwaterRefractionStrength: 0.112
   surfaceFoamTexture: {fileID: 2800000, guid: d3b0d77dfe711a04c8ff18ecc260aa66, type: 3}
@@ -23594,7 +23594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 0588ca48017a1164281d258605991aab, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 79.4
+      value: 78.9
       objectReference: {fileID: 0}
     - target: {fileID: 400066, guid: 0588ca48017a1164281d258605991aab, type: 3}
       propertyPath: m_LocalPosition.z

@@ -31,14 +31,17 @@ public class AgentPatrol : MonoBehaviour
     {
         if (agent.remainingDistance <= agent.stoppingDistance && !waiting && !agent.pathPending)
         {
-             
+        
+               
             StartCoroutine(NextPoint());
+           
+           
         }
     }
 
     IEnumerator NextPoint()
     {
-          GetComponent<Animator>().enabled=false;
+         GetComponent<Animator>().Play("Idle Walk Run Blend");
 
         float randomSeconds = Random.Range(1, 4);
         yield return new WaitForSeconds(randomSeconds);
@@ -46,9 +49,11 @@ public class AgentPatrol : MonoBehaviour
         pointIndex = (pointIndex + 1) % points.Length;
         agent.SetDestination(points[pointIndex].position);
 
-      
-        GetComponent<Animator>().enabled=true;
+              
          GetComponent<Animator>().Play("Walking");
+
+      
+        
 
         yield return null;
     }
