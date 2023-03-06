@@ -17,11 +17,12 @@ public class AgentPatrol : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
+        
+        
 
         pointIndex = -1;
         walking = false;
-        animator.SetBool("Walking", false);
+       // animator.SetBool("Walking", false);
         StartCoroutine(NextPoint());
     }
 
@@ -30,15 +31,14 @@ public class AgentPatrol : MonoBehaviour
     {
         if (agent.remainingDistance <= agent.stoppingDistance && !waiting && !agent.pathPending)
         {
+             
             StartCoroutine(NextPoint());
         }
     }
 
     IEnumerator NextPoint()
     {
-        walking = false;
-        waiting = true;
-        animator.SetBool("Walking", walking);
+          GetComponent<Animator>().enabled=false;
 
         float randomSeconds = Random.Range(1, 4);
         yield return new WaitForSeconds(randomSeconds);
@@ -46,10 +46,18 @@ public class AgentPatrol : MonoBehaviour
         pointIndex = (pointIndex + 1) % points.Length;
         agent.SetDestination(points[pointIndex].position);
 
-        walking = true;
-        waiting = false;
-        animator.SetBool("Walking", walking);
+      
+        GetComponent<Animator>().enabled=true;
+         GetComponent<Animator>().Play("Walking");
 
         yield return null;
     }
 }
+
+
+
+
+ 
+               
+
+    
