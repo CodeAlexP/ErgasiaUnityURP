@@ -192,7 +192,7 @@ namespace StarterAssets
         }
          private void OnTriggerExit(Collider other) {
             MoveSpeed=2.0f;
-            SprintSpeed=5.0f;
+            SprintSpeed=50.0f;
             onwater=false;
             GetComponent<Animator>().Play("Idle Walk Run Blend");
             Gravity=-15f;
