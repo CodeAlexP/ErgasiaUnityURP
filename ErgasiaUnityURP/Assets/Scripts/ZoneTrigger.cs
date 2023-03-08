@@ -5,9 +5,13 @@ using TMPro;
 
 public class ZoneTrigger : MonoBehaviour
 {
-    public TextMeshProUGUI zone = FindObjectOfType<TextMeshProUGUI>();
+    public TextMeshProUGUI zone;
     public string text;
+    
 
+     private void Start() {
+         zone = FindObjectOfType<TextMeshProUGUI>();
+    }
     void OnTriggerEnter() {
         zone.text = text;
     }
