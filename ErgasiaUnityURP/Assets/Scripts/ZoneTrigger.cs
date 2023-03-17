@@ -10,13 +10,13 @@ public class ZoneTrigger : MonoBehaviour
     
 
      private void Start() {
-         zone = FindObjectOfType<TextMeshProUGUI>();
+         zone = FindObjectOfType<TextMeshProUGUI>(); // Get the name of the zone
     }
-    void OnTriggerEnter() {
+    void OnTriggerEnter() { // When the user enters a zone add the zone name to the top of the screen
         zone.text = text;
     }
 
-    void OnTriggerExit() {
+    void OnTriggerExit() { // When the user exits a zone remove the zone name from the top of the screen
         zone.text = "";
     }
 }
