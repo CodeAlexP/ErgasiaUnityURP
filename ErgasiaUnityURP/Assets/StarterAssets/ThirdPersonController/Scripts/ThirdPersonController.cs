@@ -87,6 +87,7 @@ namespace StarterAssets
         private float _rotationVelocity;
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
+        static public bool dialogue = false;
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
@@ -181,18 +182,12 @@ namespace StarterAssets
                 _verticalVelocity=0f;
                 Gravity=0f;
                 onwater=true;
-                    
-
-                
-                   
-            
-                   
-                
+           
             }
         }
          private void OnTriggerExit(Collider other) {
             MoveSpeed=2.0f;
-            SprintSpeed=50.0f;
+            SprintSpeed=5.0f;
             onwater=false;
             GetComponent<Animator>().Play("Idle Walk Run Blend");
             Gravity=-15f;
