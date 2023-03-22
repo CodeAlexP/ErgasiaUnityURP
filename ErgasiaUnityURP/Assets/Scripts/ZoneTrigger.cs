@@ -9,9 +9,7 @@ public class ZoneTrigger : MonoBehaviour
     public string text;
     
 
-     private void Start() {
-         zone = FindObjectOfType<TextMeshProUGUI>(); // Get the name of the zone
-    }
+    
     void OnTriggerEnter() { // When the user enters a zone add the zone name to the top of the screen
         zone.text = text;
     }

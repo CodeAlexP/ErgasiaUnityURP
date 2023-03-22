@@ -7,6 +7,18 @@ TagManager:
   - CinemachineTarget
   - Water
   - NPC
+  - MaleD
+  - FemaleD
+  - FemaleB
+  - MaleA
+  - MaleC
+  - DialogueTemplate
+  - FemaleE
+  - FemaleA
+  - Hiero
+  - FemaleC
+  - MaleB
+  - PlagueDoctor
   layers:
   - Default
   - TransparentFX
