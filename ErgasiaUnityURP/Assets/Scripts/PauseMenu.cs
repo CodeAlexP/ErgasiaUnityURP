@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public GameObject preferencesMenuUI;
     [SerializeField] CinemachineBrain cinemachineBrain;
 
     // Update is called once per frame
@@ -26,6 +27,7 @@ public class PauseMenu : MonoBehaviour
     // Resume is run when the user presses the F2 button and the game is not paused already
     public void Resume() {
         pauseMenuUI.SetActive(false);
+        preferencesMenuUI.SetActive(false);
         GameIsPaused = false; // Make GameIsPaused false so that if the user presses the F2 button it will pause
         Cursor.visible = false; // Remove the cursor from the screen
         Cursor.lockState = CursorLockMode.Locked; // Make the cursor visible and center it
