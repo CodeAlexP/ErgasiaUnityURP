@@ -43,13 +43,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 0f; // Freeze all of the animations
     }
 
-    // LoadMenu is run when the user presses Menu in the pause menu
-    public void LoadMenu() {
-        Time.timeScale = 1f; // Make the game run at normal speed
-        Debug.Log("Loading menu..."); // Log that the main menu is loading
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1); // Change the scene to the main menu scene
-    }
-
     // QuitGame is run when the user presses the Quit button in the pause menu
     public void QuitGame() {
         Debug.Log("Quitting game..."); // Log that the user quit the game
