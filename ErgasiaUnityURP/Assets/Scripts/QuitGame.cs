@@ -8,7 +8,7 @@ public class QuitGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)) { // Check if the F2 button was pressed
+        if(Input.GetKeyDown(KeyCode.Escape)) { // Check if the Escape button was pressed
             Time.timeScale = 1f; // Make the game run at normal speed
             Debug.Log("Loading menu..."); // Log that the main menu is loading
             Cursor.visible = true;
