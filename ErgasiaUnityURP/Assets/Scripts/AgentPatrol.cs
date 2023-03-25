@@ -41,7 +41,7 @@ IEnumerator NextPoint()
 {
     animator.Play("Idle Walk Run Blend"); // Play the animation for the idle to walk transition.
 
-    float randomSeconds = Random.Range(1, 4); // Generate a random wait time between 1 and 4 seconds.
+    float randomSeconds = Random.Range(1, 2); // Generate a random wait time between 1 and 4 seconds.
     yield return new WaitForSeconds(randomSeconds); // Wait for the random time.
 
     pointIndex = (pointIndex + 1) % points.Length; // Increment the patrol point index to the next point.

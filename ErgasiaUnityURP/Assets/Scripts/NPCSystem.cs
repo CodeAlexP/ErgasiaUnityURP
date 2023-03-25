@@ -11,11 +11,19 @@ public class NPCSystem : MonoBehaviour
     public GameObject canva;
     public TextMeshProUGUI textInteract;
     private static string myTag;
+    public GameObject playerforheal;
+
+
+    public KeyCode fillHealthKey = KeyCode.H;
+
+    private HealthBarScript healthBar;
+    private bool canFillHealth = false;
+
     // Update is called once per frame
 
     void Start()
     {
-
+            healthBar = GetComponent<HealthBarScript>();
     }
 
 
@@ -29,59 +37,61 @@ public class NPCSystem : MonoBehaviour
             if (myTag == "FemaleA")
             {
                 NewDialogue("Tonight we will fight the Skeletons..");
-                canva.transform.GetChild(8).gameObject.SetActive(true);
+                canva.transform.GetChild(9).gameObject.SetActive(true);
             }
             else if (myTag == "FemaleB")
             {
                 NewDialogue("I'm the Mayor of this village!");
-                canva.transform.GetChild(8).gameObject.SetActive(true);
+                canva.transform.GetChild(9).gameObject.SetActive(true);
             }
             else if (myTag == "FemaleC")
             {
                 NewDialogue("Im the Mayor's daughter..");
-                canva.transform.GetChild(8).gameObject.SetActive(true);
+                canva.transform.GetChild(9).gameObject.SetActive(true);
             }
             else if (myTag == "FemaleD")
             {
                 NewDialogue("This lake is f.. beautiful!");
-                canva.transform.GetChild(8).gameObject.SetActive(true);
+                canva.transform.GetChild(9).gameObject.SetActive(true);
             }
             else if (myTag == "FemaleE")
             {
                 NewDialogue("Welcome traveller to a new experience!");
-                canva.transform.GetChild(8).gameObject.SetActive(true);
+                canva.transform.GetChild(9).gameObject.SetActive(true);
             }
             else if (myTag == "MaleA")
             {
                 NewDialogue("I'm growing tomatoes here");
-                canva.transform.GetChild(8).gameObject.SetActive(true);
+                canva.transform.GetChild(9).gameObject.SetActive(true);
 
             }
             else if (myTag == "MaleB")
             {
                 NewDialogue("My tomatoes are better than the next one");
-                canva.transform.GetChild(8).gameObject.SetActive(true);
+                canva.transform.GetChild(9).gameObject.SetActive(true);
 
             }
             else if (myTag == "MaleC")
             {
                 NewDialogue("This is my doss-house");
-                canva.transform.GetChild(8).gameObject.SetActive(true);
+                canva.transform.GetChild(9).gameObject.SetActive(true);
             }
             else if (myTag == "MaleD")
             {
                 NewDialogue("We have a small community because the skeletons keep killing our tribe!");
-                canva.transform.GetChild(8).gameObject.SetActive(true);
+                canva.transform.GetChild(9).gameObject.SetActive(true);
             }
             else if (myTag == "Hiero")
             {
                 NewDialogue("Rumours say that 'There is a Huge Aggresive Skeleton' inside a volcano near this area");
-                canva.transform.GetChild(8).gameObject.SetActive(true);
+                canva.transform.GetChild(9).gameObject.SetActive(true);
             }
             else if(myTag=="PlagueDoctor")
             {
-                NewDialogue("We have a lot of injured people from the last invasion of the skeletons!");
-                canva.transform.GetChild(8).gameObject.SetActive(true);
+                NewDialogue("We have a lot of injured people,I can heal you if you press H.");
+                canva.transform.GetChild(9).gameObject.SetActive(true);
+                  
+
             }
 
             if (GetComponentInParent<AgentPatrol>() != null)
@@ -93,7 +103,18 @@ public class NPCSystem : MonoBehaviour
                 this.GetComponentInParent<NavMeshAgent>().enabled= false;
             }
             this.GetComponentInParent<Animator>().Play("Idle Walk Run Blend");
+
+
         }
+
+        if(myTag=="PlagueDoctor" && canFillHealth && Input.GetKeyDown(KeyCode.H)){
+
+              healthBar.SetHealth(100);
+              playerforheal.GetComponent<Player>().currentHealth=100;
+             
+
+        }
+
     }
 
     void NewDialogue(string text)
@@ -114,15 +135,20 @@ public class NPCSystem : MonoBehaviour
             player_detection = true; 
             textInteract.enabled=true;
             textInteract.text=" Press F ";
+            canFillHealth=true;
         }
+         
+
     }
 
    
     private void OnTriggerExit(Collider other)
     {
-        if (canva.transform.childCount >= 7) // check if child exists before accessing it
+         canFillHealth=false;
+       
+        if (canva.transform.childCount >= 9) // check if child exists before accessing it
         {
-            canva.transform.GetChild(6).gameObject.SetActive(false);
+            canva.transform.GetChild(8).gameObject.SetActive(false);
         }
         player_detection = false;
         textInteract.enabled = false;

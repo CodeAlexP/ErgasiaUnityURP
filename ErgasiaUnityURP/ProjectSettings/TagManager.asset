@@ -19,6 +19,7 @@ TagManager:
   - FemaleC
   - MaleB
   - PlagueDoctor
+  - Enemy
   layers:
   - Default
   - TransparentFX

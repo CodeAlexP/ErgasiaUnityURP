@@ -6,6 +6,9 @@ using Cinemachine;
 public class HelpScreen : MonoBehaviour
 {
     public static bool GameIsPaused = false;
+    public GameObject Minimapcan;
+    public GameObject Healthbar;
+
     public GameObject helpScreenUI;
     [SerializeField] CinemachineBrain cinemachineBrain;
     // Update is called once per frame
@@ -22,6 +25,8 @@ public class HelpScreen : MonoBehaviour
     }
 
     public void Resume() {
+        Minimapcan.SetActive(true);
+        Healthbar.SetActive(true);
         helpScreenUI.SetActive(false);
         GameIsPaused = false; // Make GameIsPaused false so that if the user presses the F1 button it will pause
         Cursor.visible = false; // Remove the cursor from the screen
@@ -31,6 +36,8 @@ public class HelpScreen : MonoBehaviour
     }
 
     void Pause() {
+        Minimapcan.SetActive(false);
+        Healthbar.SetActive(false);
         helpScreenUI.SetActive(true); // Make the pause menu visible
         GameIsPaused = true; // Make GameIsPaused true so that if the user presses the F1 button it will unpause
         Cursor.visible = true; // Make the cursor visible so that the user can press the buttons
