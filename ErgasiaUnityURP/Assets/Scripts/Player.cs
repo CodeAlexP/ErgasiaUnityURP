@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 using UnityEngine.SceneManagement;
 using StarterAssets;
 public class Player : MonoBehaviour
 {
+	
 	public int maxHealth = 100;
 	public int currentHealth;
 	public GameObject HealthbarCANVA;
@@ -31,15 +33,13 @@ public class Player : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			TakeDamage(20);
-		}
+		
 		  if (Input.GetMouseButtonDown(0))
         {
 			int randomIndex = Random.Range(0, 3);
 			if(randomIndex==0){
             GetComponent<Animator>().Play("MaleAttack1");
+			
 
 			}else if (randomIndex==1){
             GetComponent<Animator>().Play("MaleAttack2");
@@ -57,7 +57,7 @@ public class Player : MonoBehaviour
 		
 	}
 
-	void TakeDamage(int damage)
+	public void TakeDamage(int damage)
 	{
 
 		currentHealth -= damage;
